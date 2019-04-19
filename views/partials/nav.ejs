@@ -1,0 +1,15 @@
+<nav>
+  <ul>
+    <li>
+      <a href="/"> Home </a>
+    </li>
+    <% Object.keys(weapons).forEach(function (id) { %>
+      <li>
+        <a href="/<%= weapons[id].name %>">
+          <%= weapons[id].title %> 
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+</nav>
+

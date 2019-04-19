@@ -1,0 +1,18 @@
+<% include ../partials/head %>
+<% include ../partials/header%>
+<body>
+  <% include ../partials/nav %>
+  <main class="content">
+    <% Object.keys(weapons).forEach(function(id){ %>
+      <div class="column">
+        <a href="/<%= weapons[id].name %>">
+          <div class="card">
+            <img src="<%= weapons[id].image %>" alt="<%= weapons[id].title %>">
+            <h2><strong> <%= weapons[id].title %> </strong></h2>
+          </div>
+        </a>
+      </div>
+    <% }) %>
+  </main>
+  <% include ../partials/footer %>
+</body>

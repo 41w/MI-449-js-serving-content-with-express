@@ -1,0 +1,25 @@
+<% include ../partials/head %>
+<% include ../partials/header%>
+
+<body>
+  <% include ../partials/nav %>
+  <main class="content">
+    <div class="column left">
+      <h1><%= items.title %></h1>
+      <img src="<%= items.image %>" alt="<%= items.title %>">
+    </div>
+    <div class="column right">
+      <h3>Summary</h2>
+      <p><%= items.summary %></p>
+      <small> 
+        Information comes from 
+        <a href="<%= items.reference%>" target="_blank">
+          <i>Here</i>
+        </a>
+      </small>
+      <h3>Guide: How to properly use the <%= items.title %> in PUBG </h3>
+      <iframe allowfullscreen width="560" height="315" src="<%= items.videoLink %>" ></iframe>
+    </div>
+  </main>
+  <% include ../partials/footer %>
+</body>
